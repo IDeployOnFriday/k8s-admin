@@ -16,4 +16,44 @@ ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
 ETCDCTL_API=3 etcdctl --endpoints=https://etcd1:2379  --cacert=/home/cloud_user/etcd-certs/etcd-ca.pem --cert=/home/cloud_user/etcd-certs/etcd-server.crt --key=/home/cloud_user/etcd-certs/etcd-server.key snapshot save /home/cloud_user/etcd_backup.db
 ```
 
-## Restore from etc d 
+## Restore from etcd 
+
+1. stop etcd 
+2. delete etcd data 
+3. restore etcd from backup
+4. set data ownership 
+5. start etcd 
+
+6. verify 
+
+Example 
+
+1. stop etcd 
+```
+sudo systemctl stop etcd
+```
+2. delete etcd data 
+```
+sudo rm -rf /var/lib/etcd
+```
+3. restore etcd from backup
+```
+sudo ETCDCTL_API=3 etcdctl snapshot restore /home/cloud_user/etcd_backup.db \
+--initial-cluster etcd-restore=https://etcd1:2380 \
+--initial-advertise-peer-urls https://etcd1:2380 \
+--name etcd-restore \
+--data-dir /var/lib/etcd
+```
+4. set data ownership 
+```
+sudo chown -R etcd:etcd /var/lib/etcd
+```
+5. start etcd 
+```
+sudo systemctl start etcd
+```
+6. verify 
+```
+ETCDCTL_API=3 etcdctl get cluster.name \
+--endpoints=https://etcd1:2379 \
+```
