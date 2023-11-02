@@ -51,45 +51,45 @@ kubectl uncordon acgk8s-control
 kubectl drain acgk8s-worker1 --ignore-daemonsets --force
 ```
 
-# ssh onto worker node
+## ssh onto worker node
 ```
 ssh acgk8s-worker1
 ```
 
-# install new version of kubeadm
+## install new version of kubeadm
 
 ```
 sudo apt-get update && \
 sudo apt-get install -y --allow-change-held-packages kubeadm=1.27.2-00
 ```
-# upgrade node 
+## upgrade node 
 
 ```
 sudo kubeaddm upgrade node
 ```
 
-# upgrade kubectl and kubeadm
+## upgrade kubectl and kubeadm
 ```
 sudo apt-get update && \
 sudo apt-get install -y --allow-change-held-packages kubelet=1.27.2-00 kubectl=1.27.2-00
 ``` 
 
-# reload 
+## reload 
 ```
 sudo systemctl daemon-reload
 ```
 
-# resart kubelet 
+## resart kubelet 
 ```
 sudo systemctl restart kubelet
 ```
 
-# exit node 
+## exit node 
 ```
 exit 
 ```
 
-# uncorden worker node 
+## uncorden worker node 
 ```
 kubectl uncordon acgk8s-worker1
 ```
