@@ -1,4 +1,6 @@
-1. Create a Service to Expose the foo Deployment's Pods Externally
+# Deployments 
+
+## 1. Create a Service to Expose the foo Deployment's Pods Externally
     Nodeport: 30080
     containerPort: 80
 
@@ -9,7 +11,7 @@ k create svc nodeport foo-svc --tcp=80:80 --node-port=30080 --dry-run=client -o 
 - manually update the selector 
 - manually add the namespace 
 
-2. Create an Ingress That Maps to the New Service
+## 2. Create an Ingress That Maps to the New Service
 
 ```
 apiVersion: networking.k8s.io/v1
