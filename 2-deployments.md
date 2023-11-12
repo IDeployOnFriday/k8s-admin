@@ -21,11 +21,33 @@ spec:
     containerPort: 80
 
 ```
-k create svc nodeport foo-svc --tcp=80:80 --node-port=30080 --dry-run=client -o yaml > svc.yaml
+k create svc nodeport foo-svc --tcp=80:80 --node-port=30080 -n bar --dry-run=client -o yaml > svc.yaml
+```
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: foo-svc
+  name: foo-svc
+  namespace: bar
+spec:
+  ports:
+  - name: 80-80
+    nodePort: 30080
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: web-foo
+  type: NodePort
+status:
+  loadBalancer: {}
 ```
 
 - manually update the selector 
-- manually add the namespace 
 
 ## 3. Create an Ingress That Maps to the New Service
 
