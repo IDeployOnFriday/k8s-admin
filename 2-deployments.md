@@ -73,3 +73,26 @@ spec:
 ```
 Link to ingress template 
 https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/service/networking/minimal-ingress.yaml
+
+after edits 
+'''
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-frontend-ingress
+  namespace: web
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web-frontend-svc
+            port:
+              number: 80
+'''
