@@ -11,7 +11,7 @@ ETCDCTL_API=3 etcdctl --endpoints=https://127.0.0.1:2379 \
 
 2. copy commands into note pad 
 
-3. popilate commands 
+3. populate commands 
 ```
 ETCDCTL_API=3 etcdctl --endpoints=https://etcd1:2379  --cacert=/home/cloud_user/etcd-certs/etcd-ca.pem --cert=/home/cloud_user/etcd-certs/etcd-server.crt --key=/home/cloud_user/etcd-certs/etcd-server.key snapshot save /home/cloud_user/etcd_backup.db
 ```
