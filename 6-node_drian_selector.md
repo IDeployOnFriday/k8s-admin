@@ -2,6 +2,9 @@
 ```
 k drain --ignore-daemonsets acgk8s-worker1
 ```
+use flags provided when it fails 
+link to docs - https://kubernetes.io/docs/tasks/administer-cluster/safely-drain-node/
+
 
 # label node 
 
