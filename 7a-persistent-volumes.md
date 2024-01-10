@@ -15,7 +15,7 @@ example storage class
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: localdisk
+  name: llocal-storage
 provisioner: kubernetes.io/no-provisioner
 allowVolumeExpansion: true
 ```
