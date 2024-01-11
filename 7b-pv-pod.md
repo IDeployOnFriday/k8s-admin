@@ -30,6 +30,22 @@ https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/po
 
 ```
 apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: host-storage-pvc
+  namespace: auth
+spec:
+  storageClassName: localdisk
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+```
+
+
+```
+apiVersion: v1
 kind: Pod
 metadata:
   name: task-pv-pod
