@@ -1,9 +1,6 @@
 # Create a Pod Which Uses a Sidecar to Expose the Main Container's Log File to Stdout
 
-- copy the multi-container pod 
-- add the commands
-- add a volume to be shared 
-- volumeMount the shared volume for both pods 
+link to sidecar yaml - https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
 
 
 ```
