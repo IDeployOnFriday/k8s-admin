@@ -7,3 +7,8 @@ Question 4 - part A stright forward, part B difficult
 Question 5 - 
 Question 6 - straight forward (quick to complete sub 20 mins) - need to know nodeSelector 
 Question 7A - more involved but do-able 
+Question 8a 
+Question 8b 
+Question 9a - straight forward 
+Question 9b - straight forward 
+Question 10 - further work needed 
