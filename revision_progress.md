@@ -20,3 +20,6 @@ Question 10 - further work needed
 times 
 
 Question 8a + 8b = under ten mins 
+
+.... killer shell 1 
+CKAD questions ok, further work on CKA bits 
