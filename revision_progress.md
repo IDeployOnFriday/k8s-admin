@@ -16,6 +16,11 @@ Question 9b - straight forward
 Question 10 - further work needed 
 
 
+Questions to work on 
+4 
+5
+10 
+
 
 times 
 
