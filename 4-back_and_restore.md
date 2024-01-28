@@ -39,9 +39,6 @@ sudo rm -rf /var/lib/etcd
 3. restore etcd from backup
 ```
 sudo ETCDCTL_API=3 etcdctl snapshot restore /home/cloud_user/etcd_backup.db \
---initial-cluster etcd-restore=https://etcd1:2380 \
---initial-advertise-peer-urls https://etcd1:2380 \
---name etcd-restore \
 --data-dir /var/lib/etcd
 ```
 4. set data ownership 
