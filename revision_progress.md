@@ -3,7 +3,7 @@
 Question 1 - straight forward (quick to complete)
 Question 2 - more involved 10 mins 
 Question 3 - straight forward (quick to complete) sub 10 mins 
-Question 4 - part A stright forward, part B difficult (more work needed)
+Question 4 - part A stright forward, part B difficult sub 10 mins 
 Question 5 - 
 Question 6 - straight forward (10 mins) - need to know nodeSelector 
 Question 7A - more involved but do-able 
