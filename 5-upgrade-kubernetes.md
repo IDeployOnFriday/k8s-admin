@@ -41,51 +41,50 @@ sudo systemctl restart kubelet
 
 # Upgrade All Kubernetes Components on the Worker Nodes
 
-
-## Drain worker node
-```
-kubectl drain acgk8s-worker1 --ignore-daemonsets --force
-```
-
 ## ssh onto worker node
 ```
 ssh acgk8s-worker1
 ```
 
-## install new version of kubeadm
+## Drain worker node
+```
+sudo apt-mark unhold kubeadm 
+sudo apt-get update 
+sudo apt-get install -y kubeadm='1.27.2-00' 
+sudo apt-mark hold kubeadm
+```
+
+## upgrade node
+```
+sudo kubeadm upgrade node
+```
+
+## drain node 
 
 ```
-sudo apt-get update && \
-sudo apt-get install -y --allow-change-held-packages kubeadm=1.27.2-00
+exit 
+kubectl drain <node-to-drain> --ignore-daemonsets
 ```
-## upgrade node 
 
-```
-sudo kubeaddm upgrade node
-```
 
 ## upgrade kubectl and kubeadm
 ```
-sudo apt-get update && \
-sudo apt-get install -y --allow-change-held-packages kubelet=1.27.2-00 kubectl=1.27.2-00
+sudo apt-mark unhold kubelet kubectl 
+sudo apt-get update 
+sudo apt-get install -y kubelet='1.27.2-00' kubectl='1.27.2-00' 
+sudo apt-mark hold kubelet kubectl
 ``` 
 
-## reload 
+## Restart the kubelet 
 ```
 sudo systemctl daemon-reload
-```
-
-## resart kubelet 
-```
 sudo systemctl restart kubelet
-```
-
-## exit node 
-```
-exit 
 ```
 
 ## uncorden worker node 
 ```
+exit 
 kubectl uncordon acgk8s-worker1
 ```
+
+## repeat for other worker node 
