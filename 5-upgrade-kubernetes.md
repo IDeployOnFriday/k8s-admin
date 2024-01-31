@@ -24,7 +24,7 @@ sudo kubeadm upgrade plan
 sudo kubeadm upgrade apply v1.27.2
 ```
 
-## Upgrade kubelet and kubectl
+# Upgrade kubelet and kubectl
 ```
 sudo apt-mark unhold kubelet kubectl 
 sudo apt-get update
@@ -32,20 +32,12 @@ sudo apt-get install -y kubelet='1.27.2-00' kubectl='1.27.2-00'
 sudo apt-mark hold kubelet kubectl
 ```
 
-## reload 
-```
-sudo systemctl daemon-reload
-```
-
 ##  restart kubelet
 ```
+sudo systemctl daemon-reload
 sudo systemctl restart kubelet
 ```
 
-## uncorden node 
-```
-kubectl uncordon acgk8s-control
-```
 
 # Upgrade All Kubernetes Components on the Worker Nodes
 
