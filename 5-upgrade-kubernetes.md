@@ -3,29 +3,33 @@
 ## Upgrade kubeadm
 
 ```
+sudo apt-mark unhold kubeadm && 
 sudo apt-get update 
-sudo apt-get install -y --allow-change-held-packages kubeadm=1.27.2-00
+sudo apt-get install -y kubeadm='1.27.2-00' 
+sudo apt-mark hold kubeadm
 ```
 
-## Drain node
+## verify download 
 ```
-kubectl drain acgk8s-control --ignore-daemonsets
-```
-
-## Plan the upgrade
-```
-sudo kubeadm upgrade plan v1.27.2
+kubeadm version
 ```
 
-## apply upgrade 
+## PVerify the upgrade plan
+```
+sudo kubeadm upgrade plan 
+```
+
+## Choose a version to upgrade
 ```
 sudo kubeadm upgrade apply v1.27.2
 ```
 
 ## Upgrade kubelet and kubectl
 ```
-sudo apt-get update && \
-sudo apt-get install -y --allow-change-held-packages kubelet=1.27.2-00 kubectl=1.27.2-00
+sudo apt-mark unhold kubelet kubectl 
+sudo apt-get update
+sudo apt-get install -y kubelet='1.27.2-00' kubectl='1.27.2-00' 
+sudo apt-mark hold kubelet kubectl
 ```
 
 ## reload 
