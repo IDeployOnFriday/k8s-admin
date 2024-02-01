@@ -28,3 +28,17 @@ Question 8a + 8b = under ten mins
 
 .... killer shell 1 
 CKAD questions ok, further work on CKA bits 
+
+
+... 
+all the questions times 
+Q1. 4 mins 
+Q2. 10 mins   (revisit)
+Q3 10 mins 
+Q4: 9 mins (revisit)
+Q5: 20 mins
+Q6: 6 mins 
+Q7: 17 mins (hard )
+Q8: more work (REVISIT)
+Q9: ok 
+Q10 fine 
