@@ -29,6 +29,9 @@ Question 8a + 8b = under ten mins
 .... killer shell 1 
 CKAD questions ok, further work on CKA bits 
 
+.. killer shell 2 
+better, average score achieved 
+
 
 ... 
 all the questions times 
