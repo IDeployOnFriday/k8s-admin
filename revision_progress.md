@@ -45,3 +45,9 @@ Q7: 17 mins (hard )
 Q8: more work (REVISIT)
 Q9: ok 
 Q10 fine 
+
+final week revisions. 
+Questions completed 
+2, 4, 7 
+
+need to do Q8 
