@@ -42,7 +42,7 @@ Q4: 9 mins (revisit)
 Q5: 20 mins
 Q6: 6 mins 
 Q7: 17 mins (hard )
-Q8: more work (REVISIT)
+Q8: more work 12 mins (revisit )
 Q9: ok 
 Q10 fine 
 
