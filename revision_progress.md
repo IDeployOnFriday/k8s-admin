@@ -50,4 +50,7 @@ final week revisions.
 Questions completed 
 2, 4, 7 
 
-need to do Q8 
+Monday Questions 
+2 - 10 mins 
+4 - 6 mins 
+8 - 10 mins 
