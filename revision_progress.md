@@ -46,11 +46,28 @@ Q8: more work 12 mins (revisit )
 Q9: ok 
 Q10 fine 
 
-final week revisions. 
-Questions completed 
-2, 4, 7 
+## final week revisions
 
-Monday Questions 
+Day 1 Questions 
 2 - 10 mins 
 4 - 6 mins 
 8 - 10 mins 
+
+Day 2 Questions  
+1 - 4 mins 
+3 - 6 mins 
+5 - 21 mins 
+
+
+## Final Exam Practice 
+
+Q1 - 4 mins
+Q2 - 7 mins 
+Q3 - 3 mins 
+Q4 - 7 mins 
+Q5 - 20 mins 
+Q6 - 7 mins 
+Q7 - 15 mins 
+Q8 - 4 mins 
+Q9 - 10 mins 
+Q10 - 5 mins  
